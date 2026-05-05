@@ -15,28 +15,29 @@
     include 'includes/header.php';
     ?>
 
-    <!-- Services Section -->
     <section class="min-h-screen text-white">
+
+        <div class="contact-hero" style="padding: 80px 24px; text-align:center; border-bottom: 1px solid #1f2937;">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+
+            <div class="max-w-7xl mx-auto">
+                <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 rounded-full px-4 py-2 mb-4 fade-up delay-1">
+                    <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span class="text-blue-400 text-sm font-medium">Our Services</span>
+                </div>
+                <h1 class="text-[3.2rem] font-bold text-white leading-tight mb-4 fade-up delay-2">
+                    Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">Premium</span> Services
+                </h1>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed fade-up delay-3">
+                    Discover our comprehensive range of transportation solutions designed for comfort, safety, and unforgettable experiences in Medellín </p>
+            </div>
+        </div>
 
         <!-- Hero Section -->
         <div class="relative py-24 px-4 overflow-hidden">
-
-
-            <div class="text-center mb-[5rem]">
-                <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 rounded-full px-4 py-2 mb-6">
-                    <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                    </svg>
-                    <span class="text-blue-400 text-md font-medium">Services</span>
-                </div>
-                <h2 class="text-[3.5rem] font-bold text-white mb-4 leading-tight">
-                    Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">Premium</span> Services
-                </h2>
-                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-                    Discover our comprehensive range of transportation solutions designed for comfort, safety, and unforgettable experiences in Medellín
-                </p>
-            </div>
-
             <!-- Services Grid -->
             <div class="max-w-7xl mx-auto px-4 pb-24">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
