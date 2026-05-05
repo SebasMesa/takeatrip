@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+@font-face {
+    font-family: 'MuseoSans', sans-serif;
+    src: url('../fonts/Demo_Fonts/Fontspring-DEMO-MuseoSans_300.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MuseoSansBold', sans-serif;
+    src: url('../fonts/Demo_Fonts/Fontspring-DEMO-MuseoSans_500.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.logo {
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+body {
+    background-color: #060606;
+    font-family: 'Rubik', sans-serif;
+}
+/* 
+html {
+    scroll-behavior: smooth;
+
+} */
+
+
+.contenedor {
+    max-width: 1300px;
+    margin: 0 auto;
+    /* padding: 0 20px;     */
+}
+
+.header {
+    box-shadow: 0 4px 35px rgba(0, 0, 0, 0.413);
+}
+
+.active {
+    font-weight: bold;
+    position: relative;
+    color: #004AAD;
+}
+
+.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #004AAD;
+    margin-top: 2px;
+}
+
+.bgMain {
+    background-image: url(../images/bgmain.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    position: relative;
+
+}
+
+.bgMain::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.716);
+}
+
+
+.overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.716);
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.05; }
+    50% { opacity: 0.1; }
+}
+
+@keyframes spin-slow {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.animate-pulse {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+}
+
+.delay-1000 {
+    animation-delay: 1000ms;
+}
+
+.efecto-blur {
+  border-radius: 16px;
+  overflow: hidden;
+    background: linear-gradient( 
+      to bottom, 
+      rgba(0, 0, 0, 0.9) 0%, 
+      rgba(0, 0, 0, 0.2) 50%, 
+      rgba(0, 0, 0, 0) 100%
+    );
+
+  width: 100%;
+}
+
+.efecto-blur::before {
+    content: '';
+    width: 100%;
+  position: absolute;
+  inset: 0;   
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 75%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 75%
+  );
+}
+
+        /* PASO 12: Animaciones personalizadas */
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 0.05;
+            }
+
+            50% {
+                opacity: 0.1;
+            }
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-pulse {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        .animate-fade-in {
+            animation: fade-in 0.6s ease-out;
+        }
+
+        .delay-2000 {
+            animation-delay: 2000ms;
+        }
+
+        /* Stagger animation para las tarjetas */
+        .group {
+            animation: fade-in 0.6s ease-out backwards;
+        }
